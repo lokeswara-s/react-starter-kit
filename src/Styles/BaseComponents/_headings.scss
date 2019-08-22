@@ -1,0 +1,15 @@
+.heading-upper-case{
+    text-transform: uppercase;
+}
+.heading-lower-case{
+    text-transform: lowercase;
+}
+.heading-capitalize{
+    text-transform: capitalize;
+}
+
+.heading-vertical{
+    text-orientation: upright;
+    writing-mode: tb;
+    display: inline-block;
+}

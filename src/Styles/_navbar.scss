@@ -1,0 +1,85 @@
+@mixin nav-bar-item-styling {
+    padding: 25%;
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+}
+
+@mixin nav-bar-item-hover-styling{
+    div{
+        border: 1px solid red;
+        margin-top: 0px;
+        padding: 0px;
+        margin-left: 50%;
+        width: 0px;
+        animation: borderAnimate 0.2s forwards;
+        // animation-direction: alternate;
+    }
+}
+@keyframes borderAnimate{
+    0%{
+        border: 1px solid red;
+        margin-left: 50%;
+        width: 0px;
+    }
+    100%{
+        border: 1px solid red;
+        margin-left: 0%;
+        width: inherit;
+    }
+}
+
+@keyframes borderAnimateReverse{
+    0%{
+        border: 1px solid red;
+        margin-left: 0%;
+        width: inherit;
+    }
+    100%{
+        border: 1px solid inherit;
+        opacity: 0;
+        margin-left: 50%;
+        width: 0px;
+    }
+}
+
+
+
+.navbar-react-001{
+    position: absolute;
+    width: 100%;
+    ul{
+        width: max-content;
+        margin: auto;
+        li{
+            display: inline-block;
+            width: 100px;
+            cursor: pointer;
+           a{
+               @include nav-bar-item-styling;
+               text-transform: uppercase;
+           }
+           div {
+                border: 0px solid #189ad3;
+                margin-top: 2px;
+                padding: 0px;
+                margin-left: 50%;
+                width: 0px; 
+                // animation: borderAnimateReverse 0.2s forwards;
+                transition: all 0.2s;
+           }
+           &:hover{
+            //    @include nav-bar-item-hover-styling;
+            div{
+                border: 1px solid #189ad3;
+                margin-top: 0px;
+                padding: 0px;
+                margin-left: 0%;
+                width: inherit;
+                transition: all 0.2s;
+            }
+           }
+        }  
+    }
+}
+

@@ -1,0 +1,38 @@
+// .bg-main{
+//     background-image: url('http://www.androidguys.com/wp-content/uploads/2016/02/68300.jpg');
+//     height: 100vh;
+// }
+.body-wrapper{
+    padding-top: 3%;
+}
+.user-avatar{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius:100%;
+    border: 8px solid #189ad3;
+    img{
+        width: 100%;
+    }
+}
+.child-user-avatar{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius:100%;
+    border: 8px solid #189ad3;
+    background-color: #189ad3;
+    transform: scale(1);
+    transition: all 1s;    
+}
+.user-avatar:hover > #child-user-avatar-hover{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius:100%;
+    border: 8px solid #189ad3;
+    background-color: #189ad3;
+    transform: scale(0);
+    transition: all 1s;    
+}
